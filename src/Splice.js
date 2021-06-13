@@ -15,5 +15,8 @@
 const fruits = ['Banana', 'Lemon','Orange', 'Apple'];
 const newSet = fruits.splice(2, 2, 'Grape', 'Kiwi','PineApple');
 
+/* At position2, remove 2 items */
+const remove = fruits.splice(2, 2);
+
 console.log(fruits, " fruits");
 console.log(newSet, "slice fruits")

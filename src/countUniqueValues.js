@@ -37,10 +37,24 @@ function countUniquesValues2(arr){
     }
 
      return i+1 +" uni values "+ newArr;
+};
+
+function countUniquesValues3(arr){
+    let lookup = {};
+
+    arr.forEach(element => {
+        if(lookup[element]){
+            lookup[element]++;
+        } else {
+            lookup[element] = 1;
+        }
+    });
+
+    return Object.keys(lookup).length;
 }
 
 
 
 
 
-console.log(countUniquesValues2([1,-1, 2,2,2,3,3,]), "unique")
+console.log(countUniquesValues3([1,-1, 2,2,2,3,3,, 4,3,,10]), "unique")
